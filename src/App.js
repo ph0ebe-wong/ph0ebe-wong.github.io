@@ -11,7 +11,7 @@ import Home from './Components/home'
 function App() {
   return (
     <Router>
-      <NavBar />
+      {/* <NavBar /> */}
       <Routes>
         <Route path="/" element={<Home />}/>
       </Routes>

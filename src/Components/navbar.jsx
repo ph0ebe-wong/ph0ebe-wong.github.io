@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Styling/NavBar.css'
-import Logo from './Assets/portfolio logo.png'
+import Logo from './Assets/phoebe_logo.PNG'
 
 const Navbar = () => {
   const [activeItem, setActiveItem] = useState('home');
