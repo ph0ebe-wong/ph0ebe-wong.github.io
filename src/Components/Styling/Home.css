@@ -1,8 +1,29 @@
+
+@font-face {
+  font-family: 'VigranMaroll';
+  src: url('./VigranMaroll.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.name-div{
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
 .name-container {
   width: 700px;
   height: 400px;
-  margin: 3% auto;
   position: relative;
+  /* Removed margin and top properties */
+  /* Added flex properties for center alignment */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .name-line {
@@ -22,27 +43,25 @@
   /* border-left: 5px solid black; */
   backface-visibility: hidden; /* Added standard property */
   -webkit-backface-visibility: hidden;
-  left: 300px;
-  top: -16px;
+  left: 341px;
+  top: 10px;
 }
 
 .name-container .name-line-2 {
   /* border-right: 5px solid black; */
-  left: 300px;
-  top: -16px;
+  left: 341px;
+  top: 10px;
 
 }
 
 .name-container .name-text {
   color: white;
   text-transform: uppercase;
-  font-family: 'Lato';
+  font-family: 'VigranMaroll';
   font-weight: 300;
   font-size: 75px;
   text-align: left;
   width: 230px; /* Adjusted from 0px */
-  margin-top: 150px;
-  margin-left: 175px;
   overflow: hidden;
   transform: rotate(35deg);
   position: relative;
