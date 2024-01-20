@@ -39,12 +39,23 @@ return (
         <div className="about-me-div" style={{height: '100vh', background: 'linear-gradient(180deg, #000 0%, #6591D3 78.45%)', display: 'flex', flexDirection: 'row', alignItems:'center'}}>
             <MoonCanvas />
             <div className="about-me" style={{padding: 20, width:'50%'}}>
-                <h2>About Me</h2>
-                <p>I'm Phoebe Wong, a Cybersecurity and Digital Forensics enthusiast from Nanyang Polytechnic, graduating in 2024. 
+                <h2 style={{fontSize: '35px'}} >About Me</h2>
+                <p style={{paddingRight: 130, fontSize: '20px', marginTop: 25}}>I'm Phoebe Wong, a Cybersecurity and Digital Forensics enthusiast from Nanyang Polytechnic, graduating in 2024. 
                     With a solid background in full-stack development and cloud computing, I aim to specialize in cyber forensics. My experiences, ranging from a business analytics internship to innovative project work, fuel my passion for using technology in safeguarding digital spaces. 
                     I'm dedicated to making a meaningful impact in cybersecurity and keen on exploring cutting-edge solutions in cyber forensic investigations.
                 </p>
-                <Asteriods social={'Github'}/>
+                <div style={{marginTop: 20}}>
+
+                    <div>
+                        < img style={{width: 100, height: 100}} src={asteriods} />
+                        <div style={{background:'royalblue', width: 110, height: 40, display:'flex', justifyContent:'center', alignItems:'center', borderRadius: 10}}>
+                            Github
+                        </div>
+                    </div>
+
+
+                    {/* <Asteriods social={'Github'}/> */}
+                </div>
             </div>
         </div>
     </>
