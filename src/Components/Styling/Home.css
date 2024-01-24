@@ -190,7 +190,7 @@
 
 .skills-div{
     background-image: url('../Assets/skills_bg.jpg'); 
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -433,6 +433,7 @@ button:hover .star-6 {
     transition: opacity .8s cubic-bezier(0, 0.02, 0, 1);
     opacity: var(--opacity);
     font-family: 'Orelo-sw-db', serif;
+    background: black;
 
     &:before {
       content: '';

@@ -69,8 +69,8 @@ const Skills = () => {
           }
       ]);
 
-      // States
-  const [progress, setProgress] = useState(50);
+  // States
+  const [progress, setProgress] = useState(0);
   const [active, setActive] = useState(0);
   const isDownRef = useRef(false);
   const startXRef = useRef(0);
@@ -94,17 +94,22 @@ const Skills = () => {
   // Animate
   const animate = () => {
     const newProgress = Math.max(0, Math.min(progress, 100));
-    const newActive = Math.floor(newProgress / 100 * (items.length - 1));
+    const newActive = Math.round(newProgress / 100 * (items.length - 1));
     setActive(newActive);
-    setProgress(newProgress);
-  };
+};
 
   // Event Handlers
   const handleWheel = e => {
     const wheelProgress = e.deltaY * speedWheel;
-    setProgress(prevProgress => prevProgress + wheelProgress);
+    if (wheelProgress < 0 && progress <= 0) {
+      // Reset progress to 0 when scrolling up at the top
+      setProgress(0);
+    } else {
+      // Normal behavior
+      setProgress(prevProgress => Math.max(0, Math.min(prevProgress + wheelProgress, 100)));
+    }
   };
-
+  
   const handleMouseMove = e => {
     const x = e.clientX || (e.touches && e.touches[0].clientX) || 0;
     if (!isDownRef.current) return;
@@ -123,11 +128,10 @@ const Skills = () => {
   };
 
   const handleItemClick = index => {
-    console.log("Clicked item index:", index);
     const newProgress = (index / (items.length - 1)) * 100;
     setProgress(newProgress);
-  };
-    
+    console.log(`Index: ${index}, Progress: ${newProgress}`);
+};    
 
   // Effects
   useEffect(() => {
@@ -135,11 +139,19 @@ const Skills = () => {
   }, [progress, items.length]);
 
   useEffect(() => {
+    document.addEventListener('mousewheel', handleWheel);
+    document.addEventListener('mousedown', handleMouseDown);
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseup', handleMouseUp);
     document.addEventListener('touchstart', handleMouseDown);
     document.addEventListener('touchmove', handleMouseMove);
-    document.addEventListener('touchend', handleMouseUp);
-
+    document.addEventListener('touchend', handleMouseUp);    
+  
     return () => {
+      document.removeEventListener('mousewheel', handleWheel);
+      document.removeEventListener('mousedown', handleMouseDown);
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseup', handleMouseUp);
       document.removeEventListener('touchstart', handleMouseDown);
       document.removeEventListener('touchmove', handleMouseMove);
       document.removeEventListener('touchend', handleMouseUp);
