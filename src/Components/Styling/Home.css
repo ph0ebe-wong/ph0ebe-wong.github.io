@@ -19,8 +19,6 @@
   width: 700px;
   height: 400px;
   position: relative;
-  /* Removed margin and top properties */
-  /* Added flex properties for center alignment */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -239,7 +237,7 @@ li{
 	}
 }
 
-button {
+.skills-button {
   position: relative;
   padding: 12px 35px;
   background: #F2F1E6;
@@ -319,13 +317,13 @@ button {
   transition: all 0.8s ease;
 }
 
-button:hover {
+.skills-button:hover {
   background: transparent;
   color: #F2F1E6;
   box-shadow: 0 0 25px 	#f2f1e6dc;
 }
 
-button:hover .star-1 {
+.skills-button:hover .star-1 {
   position: absolute;
   top: -80%;
   left: -30%;
@@ -335,7 +333,7 @@ button:hover .star-1 {
   z-index: 2;
 }
 
-button:hover .star-2 {
+.skills-button:hover .star-2 {
   position: absolute;
   top: -25%;
   left: 10%;
@@ -345,7 +343,7 @@ button:hover .star-2 {
   z-index: 2;
 }
 
-button:hover .star-3 {
+.skills-button:hover .star-3 {
   position: absolute;
   top: 55%;
   left: 25%;
@@ -355,7 +353,7 @@ button:hover .star-3 {
   z-index: 2;
 }
 
-button:hover .star-4 {
+.skills-button:hover .star-4 {
   position: absolute;
   top: 30%;
   left: 80%;
@@ -365,7 +363,7 @@ button:hover .star-4 {
   z-index: 2;
 }
 
-button:hover .star-5 {
+.skills-button:hover .star-5 {
   position: absolute;
   top: 25%;
   left: 115%;
@@ -375,7 +373,7 @@ button:hover .star-5 {
   z-index: 2;
 }
 
-button:hover .star-6 {
+.skills-button:hover .star-6 {
   position: absolute;
   top: 5%;
   left: 60%;
@@ -399,7 +397,7 @@ button:hover .star-6 {
 }
 
 .carousel-item {
-  --items: 10;
+  --items: 7;
   --width: clamp(150px, 30vw,  300px);
   --height: clamp(200px, 40vw,  400px);
   --x: calc(var(--active) * 800%);
