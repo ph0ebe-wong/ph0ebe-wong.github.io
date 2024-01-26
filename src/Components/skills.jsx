@@ -10,12 +10,12 @@ const Skills = () => {
         {'name': 'Javascript'},
         {'name': 'EnCase'},
         {'name': 'Metasploit'},
-        {'name': 'AWS Computing'},
-        {'name': 'Python Programming'},
+        {'name': 'AWS Cloud'},
+        {'name': 'Python'},
         {'name': 'Flask'},
-        {'name': 'Structured Query Language'},
+        {'name': 'MySQL'},
         {'name': 'Bootstrap'},
-        {'name': 'Web Design'},
+        {'name': 'UI/UX'},
         {'name': 'Figma'},
         {'name': 'Premiere Pro'}
     ];
@@ -160,77 +160,46 @@ const Skills = () => {
 
       return (
         <div className="skills-div">
-            <div style={{display:'flex', justifyContent:'center'}}>
-            <button class="btn-cloud" href="#">Cloud Button</button>
-                <div id="skills-container" data-animated>
-                    <ul id="skills-list">
-                        {skills_list.map((skill, index) => (
-                          <>
-                            <button className="skills-button" key={index} > {skill.name}
-                                <div class="star-1">
-                                    <svg viewBox="0 0 784.11 815.53" style={{shapeRendering: "geometricPrecision", textRendering: "geometricPrecision", imageRendering: "optimizeQuality", fillRule: "evenodd", clipRule: "evenodd"}} version="1.1"  ><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" className="fil0"></path></g></svg>
-                                </div>
-                                <div class="star-2">
-                                    <svg viewBox="0 0 784.11 815.53" style={{shapeRendering: "geometricPrecision", textRendering: "geometricPrecision", imageRendering: "optimizeQuality", fillRule: "evenodd", clipRule: "evenodd"}} version="1.1" ><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" className="fil0"></path></g></svg>
-                                </div>
-                                <div class="star-3">
-                                    <svg viewBox="0 0 784.11 815.53" style={{shapeRendering: "geometricPrecision", textRendering: "geometricPrecision", imageRendering: "optimizeQuality", fillRule: "evenodd", clipRule: "evenodd"}} version="1.1"  ><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" className="fil0"></path></g></svg>
-                                </div>
-                                <div class="star-4">
-                                    <svg viewBox="0 0 784.11 815.53" style={{shapeRendering: "geometricPrecision", textRendering: "geometricPrecision", imageRendering: "optimizeQuality", fillRule: "evenodd", clipRule: "evenodd"}} version="1.1"  ><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" className="fil0"></path></g></svg>
-                                </div>
-                                <div class="star-5">
-                                    <svg viewBox="0 0 784.11 815.53" style={{shapeRendering: "geometricPrecision", textRendering: "geometricPrecision", imageRendering: "optimizeQuality", fillRule: "evenodd", clipRule: "evenodd"}} version="1.1" ><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" className="fil0"></path></g></svg>
-                                </div>
-                                <div class="star-6">
-                                    <svg viewBox="0 0 784.11 815.53" style={{shapeRendering: "geometricPrecision", textRendering: "geometricPrecision", imageRendering: "optimizeQuality", fillRule: "evenodd", clipRule: "evenodd"}} version="1.1" ><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
-                                </div>
-                            </button>
-                            </>
-                        ))}
-                        {duplicatedSkills.map(skill => (
-                            <button className="skills-button"  key={skill.key} aria-hidden={skill['aria-hidden']} > {skill.name}
-                                <div class="star-1">
-                                    <svg viewBox="0 0 784.11 815.53" style={{shapeRendering: "geometricPrecision", textRendering: "geometricPrecision", imageRendering: "optimizeQuality", fillRule: "evenodd", clipRule: "evenodd"}} version="1.1"  ><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" className="fil0"></path></g></svg>
-                                </div>
-                                <div class="star-2">
-                                    <svg viewBox="0 0 784.11 815.53" style={{shapeRendering: "geometricPrecision", textRendering: "geometricPrecision", imageRendering: "optimizeQuality", fillRule: "evenodd", clipRule: "evenodd"}} version="1.1" ><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" className="fil0"></path></g></svg>
-                                </div>
-                                <div class="star-3">
-                                    <svg viewBox="0 0 784.11 815.53" style={{shapeRendering: "geometricPrecision", textRendering: "geometricPrecision", imageRendering: "optimizeQuality", fillRule: "evenodd", clipRule: "evenodd"}} version="1.1"  ><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" className="fil0"></path></g></svg>
-                                </div>
-                                <div class="star-4">
-                                    <svg viewBox="0 0 784.11 815.53" style={{shapeRendering: "geometricPrecision", textRendering: "geometricPrecision", imageRendering: "optimizeQuality", fillRule: "evenodd", clipRule: "evenodd"}} version="1.1"  ><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" className="fil0"></path></g></svg>
-                                </div>
-                                <div class="star-5">
-                                    <svg viewBox="0 0 784.11 815.53" style={{shapeRendering: "geometricPrecision", textRendering: "geometricPrecision", imageRendering: "optimizeQuality", fillRule: "evenodd", clipRule: "evenodd"}} version="1.1" ><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" className="fil0"></path></g></svg>
-                                </div>
-                                <div class="star-6">
-                                    <svg viewBox="0 0 784.11 815.53" style={{shapeRendering: "geometricPrecision", textRendering: "geometricPrecision", imageRendering: "optimizeQuality", fillRule: "evenodd", clipRule: "evenodd"}} version="1.1" ><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
-                                </div>
-                            </button>
-                        
-                        ))}
-                    </ul>
-                </div>
+          <div style={{display:'flex', justifyContent:'center'}}>
+            <div id="skills-container" data-animated>
+                <ul id="skills-list">
+                  {skills_list.map((skill, index) => (
+                    <>
+                      <button key={index}  class="cloud-btn">
+                        <div class="cloud-left"> </div>
+                        <span class="cloud-text">{skill.name}</span>
+                        <div class="cloud-right"> </div>
+                      </button>
+                      </>
+                    ))}
+                    {duplicatedSkills.map(skill => (
+                      <button  key={skill.key} aria-hidden={skill['aria-hidden']} class="cloud-btn">
+                        <div class="cloud-left"> </div>
+                        <span class="cloud-text">{skill.name}</span>
+                        <div class="cloud-right"> </div>
+                      </button>
+                    ))}
+                </ul>
             </div>
+          </div>
 
-<div className="carousel">
-    {items.map((item, index) => (
-      <div
-        key={index}
-        className="carousel-item"
-        onClick={() => handleItemClick(index)}
-        style={displayItems(index, active)}
-      >
-        <div className="carousel-box">
-          <div className="title">{item.title}</div>
-          <div className="num">{item.num}</div>
-          <img src={item.imgSrc} alt={item.title} />
+          <div className="carousel">
+            {items.map((item, index) => (
+              <div
+                key={index}
+                className="carousel-item"
+                onClick={() => handleItemClick(index)}
+                style={displayItems(index, active)}
+              >
+                <div className="carousel-box">
+                  <div className="title">{item.title}</div>
+                  <div className="num">{item.num}</div>
+                  <img src={item.imgSrc} alt={item.title} />
+                </div>
+              </div>
+            ))}
+          </div>            
         </div>
-      </div>
-    ))}
-  </div>            </div>
     );
 }
 
