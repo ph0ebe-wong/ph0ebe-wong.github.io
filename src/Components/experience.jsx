@@ -1,90 +1,108 @@
-import React, { useState, useEffect, useRef } from "react";
-import './Styling/experience.css';
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+
+import SchoolIcon from '@mui/icons-material/School';
+import WorkIcon from "@mui/icons-material/Work";
+import StarIcon from '@mui/icons-material/Star';
+
+const Experience = () =>{
 
 
-const Experience = () => {
+	return (
+		<div style={{background: 'black'}}>
+			<VerticalTimeline>
+				<VerticalTimelineElement
+					iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
+					icon={<StarIcon />}
+				/>
+				<VerticalTimelineElement
+					className="vertical-timeline-element--work"
+					contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+					contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+					date="June 2019"
+					iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+					icon={<WorkIcon />}
+				>
+					<h3 className="vertical-timeline-element-title">Temporary Veterinary Clinic Support Staff</h3>
+					<h4 className="vertical-timeline-element-subtitle">Animal World Veterinary Clinic</h4>
+					<p>
+						I gained hands-on experience in various aspects of clinic operations, encompassing reception, pharmacy management, patient consultation, and hospital room procedures.				
+					</p>
+				</VerticalTimelineElement>
+				<VerticalTimelineElement
+					className="vertical-timeline-element--education"
+					contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+					contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+					date="Jan 2017 - Dec 2020"
+					iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+					icon={<SchoolIcon />}
+				>
+					<h3 className="vertical-timeline-element-title">Cambridge O Levels</h3>
+					<h4 className="vertical-timeline-element-subtitle">Singapore, Singapore</h4>
+				</VerticalTimelineElement>
+				<VerticalTimelineElement
+					className="vertical-timeline-element--work"
+					contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+					contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+					date="Aug 2022 - Sept 2022"
+					iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+					icon={<WorkIcon />}
+				>
+					<h3 className="vertical-timeline-element-title">Temporary Administrative Support Staff</h3>
+					<h4 className="vertical-timeline-element-subtitle">Academy of Medicine</h4>
+					<p>
+						In my role, I actively contributed to event success, assisting with various tasks and managing administrative duties. My responsibilities included making key calls and handling essential paperwork, ensuring efficient coordination and organization.				
+					</p>
+				</VerticalTimelineElement>
+				<VerticalTimelineElement
+					className="vertical-timeline-element--work"
+					contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+					contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+					date="Nov 2020 - Dec 2023"
+					iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+					icon={<WorkIcon />}
+				>
+					<h3 className="vertical-timeline-element-title">Service Crew</h3>
+					<h4 className="vertical-timeline-element-subtitle">Hot Palette Holdings co. ltd</h4>
+					<p>
+						In a fast-paced environment, I provided excellent customer service, efficiently managing food and beverage services and order coordination. I ensured accuracy in financial transactions and maintained a tidy workstation, enhancing the overall customer experience.				
+					</p>
+				</VerticalTimelineElement>
+				<VerticalTimelineElement
+					className="vertical-timeline-element--work"
+					contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+					contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+					date="Sept 2023 - Present"
+					iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+					icon={<WorkIcon />}
+				>
+					<h3 className="vertical-timeline-element-title">Business Analytics Intern</h3>
+					<h4 className="vertical-timeline-element-subtitle">NUS Business Analytics Centre</h4>
+					<p>
+						I developed a Web3 Data Marketplace, using React.js and AWS to build a full-stack application with a focus on security. My efforts were centered on ensuring data integrity and user trust, emphasizing my dedication to creating dependable software solutions				
+					</p>
+				</VerticalTimelineElement>
+				<VerticalTimelineElement
+					className="vertical-timeline-element--education"
+					contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+					contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+					date="April 2021 - May 2024"
+					iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+					icon={<SchoolIcon />}
+				>
+					<h3 className="vertical-timeline-element-title">Diploma in Cybersecurity and Digital Forensic</h3>
+					<h4 className="vertical-timeline-element-subtitle">Nanyang Polytechnic</h4>
+					{/* <p>
+						Obtained Directors List for Semester AY
+					</p> */}
+				</VerticalTimelineElement>
+				<VerticalTimelineElement
+					iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
+					icon={<StarIcon />}
+				/>
+			</VerticalTimeline>	
+		</div>
 
-
-      return (
-<section id="cd-timeline" class="cd-container">
-		<div class="cd-timeline-block">
-			<div class="cd-timeline-img cd-picture">
-				<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-picture.svg" alt="Picture" />
-			</div> 
-
-			<div class="cd-timeline-content">
-				<h2>Title of section 1</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-				<a href="#0" class="cd-read-more">Read more</a>
-				<span class="cd-date">Jan 14</span>
-			</div> 
-		</div> 
-
-		<div class="cd-timeline-block">
-			<div class="cd-timeline-img cd-movie">
-				<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-movie.svg" alt="Movie" />
-			</div> 
-
-			<div class="cd-timeline-content">
-				<h2>Title of section 2</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
-				<a href="#0" class="cd-read-more">Read more</a>
-				<span class="cd-date">Jan 18</span>
-			</div> 
-		</div> 
-
-		<div class="cd-timeline-block">
-			<div class="cd-timeline-img cd-picture">
-				<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-picture.svg" alt="Picture"/>
-			</div> 
-
-			<div class="cd-timeline-content">
-				<h2>Title of section 3</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>
-				<a href="#0" class="cd-read-more">Read more</a>
-				<span class="cd-date">Jan 24</span>
-			</div> 
-		</div> 
-
-		<div class="cd-timeline-block">
-			<div class="cd-timeline-img cd-location">
-				<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-location.svg" alt="Location"/>
-			</div> 
-
-			<div class="cd-timeline-content">
-				<h2>Title of section 4</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-				<a href="#0" class="cd-read-more">Read more</a>
-				<span class="cd-date">Feb 14</span>
-			</div> 
-		</div> 
-
-		<div class="cd-timeline-block">
-			<div class="cd-timeline-img cd-location">
-				<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-location.svg" alt="Location" />
-			</div> 
-
-			<div class="cd-timeline-content">
-				<h2>Title of section 5</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
-				<a href="#0" class="cd-read-more">Read more</a>
-				<span class="cd-date">Feb 18</span>
-			</div> 
-		</div> 
-
-		<div class="cd-timeline-block">
-			<div class="cd-timeline-img cd-movie">
-				<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-movie.svg" alt="Movie"/>
-			</div> 
-
-			<div class="cd-timeline-content">
-				<h2>Final Section</h2>
-				<p>This is the content of the last section</p>
-				<span class="cd-date">Feb 26</span>
-			</div> 
-		</div> 
-	</section>
-    );
-}
-
-export default Experience;
+	)
+	}
+	export default Experience 
