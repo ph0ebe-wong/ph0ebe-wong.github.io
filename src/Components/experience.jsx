@@ -9,13 +9,17 @@ const Experience = () =>{
 
 	return (
 		<div style={{}}>
+			<div style={{height: '10vh', paddingLeft: '10vh'}}>
+				<h1>Work Experience</h1>
+				<span></span>
+			</div>
 			<VerticalTimeline>
 				<VerticalTimelineElement
 					className="vertical-timeline-element--work"
-					contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-					contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+					contentStyle={{ background: '#2B343A', color: 'rgba(255,255,255,0.7)' }}
+					contentArrowStyle={{ borderRight: '7px solid  #2B343A' }}
+					iconStyle={{ background: '#7E57C2', color: '#fff' }}
 					date="June 2019"
-					iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
 					icon={<WorkIcon />}
 				>
 					<h3 className="vertical-timeline-element-title">Temporary Veterinary Clinic Support Staff</h3>
@@ -26,10 +30,10 @@ const Experience = () =>{
 				</VerticalTimelineElement>
 				<VerticalTimelineElement
 					className="vertical-timeline-element--education"
-					contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-					contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+					contentStyle={{ background: '#2B343A', color: 'rgba(255,255,255,0.7)' }}
+					contentArrowStyle={{ borderRight: '7px solid  #2B343A' }}
+					iconStyle={{ background: '#7E57C2', color: '#fff' }}
 					date="Jan 2017 - Dec 2020"
-					iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
 					icon={<SchoolIcon />}
 				>
 					<h3 className="vertical-timeline-element-title">Cambridge O Levels</h3>
@@ -37,10 +41,10 @@ const Experience = () =>{
 				</VerticalTimelineElement>
 				<VerticalTimelineElement
 					className="vertical-timeline-element--work"
-					contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-					contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+					contentStyle={{ background: '#2B343A', color: 'rgba(255,255,255,0.7)' }}
+					contentArrowStyle={{ borderRight: '7px solid  #2B343A' }}
+					iconStyle={{ background: '#7E57C2', color: '#fff' }}
 					date="Aug 2022 - Sept 2022"
-					iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
 					icon={<WorkIcon />}
 				>
 					<h3 className="vertical-timeline-element-title">Temporary Administrative Support Staff</h3>
@@ -51,10 +55,10 @@ const Experience = () =>{
 				</VerticalTimelineElement>
 				<VerticalTimelineElement
 					className="vertical-timeline-element--work"
-					contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-					contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+					contentStyle={{ background: '#2B343A', color: 'rgba(255,255,255,0.7)' }}
+					contentArrowStyle={{ borderRight: '7px solid  #2B343A' }}
+					iconStyle={{ background: '#7E57C2', color: '#fff' }}
 					date="Nov 2020 - Dec 2023"
-					iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
 					icon={<WorkIcon />}
 				>
 					<h3 className="vertical-timeline-element-title">Service Crew</h3>
@@ -65,10 +69,10 @@ const Experience = () =>{
 				</VerticalTimelineElement>
 				<VerticalTimelineElement
 					className="vertical-timeline-element--work"
-					contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-					contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+					contentStyle={{ background: '#2B343A', color: 'rgba(255,255,255,0.7)' }}
+					contentArrowStyle={{ borderRight: '7px solid  #2B343A' }}
+					iconStyle={{ background: '#7E57C2', color: '#fff' }}
 					date="Sept 2023 - Present"
-					iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
 					icon={<WorkIcon />}
 				>
 					<h3 className="vertical-timeline-element-title">Business Analytics Intern</h3>
@@ -79,10 +83,10 @@ const Experience = () =>{
 				</VerticalTimelineElement>
 				<VerticalTimelineElement
 					className="vertical-timeline-element--education"
-					contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-					contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+					contentStyle={{ background: '#2B343A', color: 'rgba(255,255,255,0.7)' }}
+					contentArrowStyle={{ borderRight: '7px solid  #2B343A' }}
+					iconStyle={{ background: '#7E57C2', color: '#fff' }}
 					date="April 2021 - May 2024"
-					iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
 					icon={<SchoolIcon />}
 				>
 					<h3 className="vertical-timeline-element-title">Diploma in Cybersecurity and Digital Forensic</h3>
