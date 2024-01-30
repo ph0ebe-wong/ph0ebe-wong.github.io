@@ -3,18 +3,13 @@ import 'react-vertical-timeline-component/style.min.css';
 
 import SchoolIcon from '@mui/icons-material/School';
 import WorkIcon from "@mui/icons-material/Work";
-import StarIcon from '@mui/icons-material/Star';
 
 const Experience = () =>{
 
 
 	return (
-		<div style={{background: 'black'}}>
+		<div style={{}}>
 			<VerticalTimeline>
-				<VerticalTimelineElement
-					iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
-					icon={<StarIcon />}
-				/>
 				<VerticalTimelineElement
 					className="vertical-timeline-element--work"
 					contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
@@ -96,10 +91,6 @@ const Experience = () =>{
 						Obtained Directors List for Semester AY
 					</p> */}
 				</VerticalTimelineElement>
-				<VerticalTimelineElement
-					iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
-					icon={<StarIcon />}
-				/>
 			</VerticalTimeline>	
 		</div>
 

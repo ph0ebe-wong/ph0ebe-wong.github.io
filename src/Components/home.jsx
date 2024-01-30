@@ -13,7 +13,7 @@ return (
         <Landing />
         <AboutMe />
         <Skills />
-        <Experience />
+        {/* <Experience /> */}
     </>
 )
 }
