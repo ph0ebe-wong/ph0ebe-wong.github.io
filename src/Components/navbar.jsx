@@ -28,17 +28,16 @@ const Navbar = () => {
 
   return (
     <nav class="nav">
-    <div class="container">
-      {/* <h1 class="logo"><a href="#"><i class="fa-solid fa-moon"></i> My Website</a></h1> */}
-      <img className="navbar-logo" src={Logo }/> 
-      <ul>
-        <li><a href="#" className={`nav-item ${activeItem === 'home' ? 'current' : ''}`} onClick={(e) => handleItemClick('home', e)}>Home</a></li>
-        <li><a href="#" className={`nav-item ${activeItem === 'experience' ? 'current' : ''}`} onClick={(e) => handleItemClick('experience', e)}>Experience</a></li>
-        <li><a href="#" className={`nav-item ${activeItem === 'projects' ? 'current' : ''}`} onClick={(e) => handleItemClick('projects', e)}>Projects</a></li>
-      </ul>      
-      <span ref={indicatorRef} className="nav-indicator"></span>
-    </div>
-  </nav>  
+      <div class="container">
+        <img className="navbar-logo" src={Logo }/> 
+        <ul>
+          <li><a href="#" className={`nav-item ${activeItem === 'home' ? 'current' : ''}`} onClick={(e) => handleItemClick('home', e)}>Home</a></li>
+          <li><a href="#" className={`nav-item ${activeItem === 'experience' ? 'current' : ''}`} onClick={(e) => handleItemClick('experience', e)}>Experience</a></li>
+          <li><a href="#" className={`nav-item ${activeItem === 'projects' ? 'current' : ''}`} onClick={(e) => handleItemClick('projects', e)}>Projects</a></li>
+        </ul>      
+        <span ref={indicatorRef} className="nav-indicator"></span>
+      </div>
+    </nav>  
   );
 };
 

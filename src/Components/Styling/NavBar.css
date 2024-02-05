@@ -12,10 +12,10 @@
   padding: 0;
 }
 
-body {
+/* body {
   font-family: "Montserrat", sans-serif;
   color: #222;
-}
+} */
 
 .container {
   width: 100%;
@@ -23,7 +23,7 @@ body {
 }
 
 .nav {
-  position: relative;  
+  position: fixed;  
   background-color: black;
   top: 0;
   left: 0;
