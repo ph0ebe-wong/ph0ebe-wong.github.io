@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.63f885ed.css",
+    "main.js": "/static/js/main.f455df32.js",
+    "static/js/787.588971bd.chunk.js": "/static/js/787.588971bd.chunk.js",
+    "static/media/skills_bg.jpg": "/static/media/skills_bg.534a11a50e6f3aeaa045.jpg",
+    "static/media/cognidex.png": "/static/media/cognidex.208b2c3c5e7c1059a9a6.png",
+    "static/media/asteriods.png": "/static/media/asteriods.b88c6d2e979166d1f192.png",
+    "static/media/papaya food court home.jpg": "/static/media/papaya food court home.3d57e28ee2e407095276.jpg",
+    "static/media/matchable home.jpg": "/static/media/matchable home.9d62e47763cc079582b1.jpg",
+    "static/media/phoebe_logo.PNG": "/static/media/phoebe_logo.1123ede5878e28dd10f6.PNG",
+    "static/media/ecoden home.jpg": "/static/media/ecoden home.f95119a4270d723b8bd1.jpg",
+    "static/media/VigranMaroll.otf": "/static/media/VigranMaroll.a0c195415e060db762a2.otf",
+    "static/media/Robot9000.ttf": "/static/media/Robot9000.ee95fadeccfe3d19fc58.ttf",
+    "static/media/8bitOperator.ttf": "/static/media/8bitOperator.325b9b8522af8a950cb3.ttf",
+    "index.html": "/index.html",
+    "main.63f885ed.css.map": "/static/css/main.63f885ed.css.map",
+    "main.f455df32.js.map": "/static/js/main.f455df32.js.map",
+    "787.588971bd.chunk.js.map": "/static/js/787.588971bd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.63f885ed.css",
+    "static/js/main.f455df32.js"
+  ]
+}
