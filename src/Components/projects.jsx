@@ -7,34 +7,40 @@ import solarwind from "./Assets/projects/solarwind.jpeg"
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 const projectData = [
   
   {
+    id: 'ecoden',
     backgroundImage: ecoden,
     title: "ECO-DEN SUPERMARKET",
     description: ["A e-commerce supermarket website allows user to browse, add and purchase grocery items with PayPal, and includes a membership point system through purchases or an in-app card game."], 
     skills: ["HTML", "CSS", "Javascript", "Flask", "Microsoft SQL"]
   },
   {
+    id: 'papaya_food_court',
     backgroundImage: papaya,
     title: "PAPAYA FOOD COURT",
     description: ["An online food delivery service enables users to order and savor local cuisine, with an emphasis on ensuring website security."], 
     skills: ["HTML", "CSS", "Javascript", "Flask", "Python Shelve", "Website security"]
   },
   {
+    id: 'matchable',
     backgroundImage: matchable,
     title: "MATCHABLE",
     description: ["An online dating website allows user to conveniently connect with potential partners regardless of distance, with emphasis on ensuring data and website security"], 
     skills: ["HTML", "CSS", "Javascript", "Flask", "MySQL", "Website Security", "Data Security"]
   },
   {
+    id: 'solarwind_simulation',
     backgroundImage: solarwind,
     title: "SIMULATION",
     description: ["This project simulates the SolarWinds cyberattack by recreating its vulnerabilities in VMWare environments, implementing defence, monitoring, and backup systems to enhance security and ensure swift recovery"], 
     skills: ["Kali Linux", "Immunet", "ModSecurity", "Splunk", "VMWare", "Restic"]
   },
   {
+    id: 'cognidex',
     backgroundImage: cognidex,
     title: "COGNIDEX",
     description: ["A decentralized application (DApp) that allows users to create, buy, sell data."], 
@@ -42,6 +48,7 @@ const projectData = [
     skills: ["Figma", "Reactjs", "AWS", "Postgres", ]
   },
   {
+    id: 'portfolio',
     backgroundImage: "url('https://d21950x0o1sh55.cloudfront.net/uploads/inside_exclusif/picture/6/desktop_VALERIAN_BNP_02.jpg')",
     title: "PORTFOLIO WEBSITE",
     description: ["A website to showcase my portfolio and projects."], 
@@ -61,6 +68,9 @@ const Projects = () => {
       setVisibleProject(index);
     }
   };
+
+  const navigate = useNavigate()
+
 
   return (
     <div className="projects-div">
@@ -85,7 +95,11 @@ const Projects = () => {
                   }
                   <div
                     className="toggle-project-btn"
-                    onClick={() => setVisibleProject(index)}
+                    // onClick={() => setVisibleProject(index)}
+                    onClick={()=>navigate(
+                      '/project',
+                      { state: { project: project }} 
+                    )}
                   >
                     <KeyboardArrowUpIcon />
                     <p>Click to view project</p>

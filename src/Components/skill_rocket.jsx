@@ -36,7 +36,7 @@ const acheivement_list = [
 return (
     <>
         <div className="skill-computer skill-computer-left">
-            <h2 className="skill-computer-title"> {"> Skill"}  </h2>
+            <h2 className="skill-computer-title"> {"> Skills"}  </h2>
             <div className="skill-list-div">
                 {skills_list.map((skill, index) => (
                     <span className="skill-list-span"  key={index}>
@@ -46,7 +46,7 @@ return (
             </div>                
         </div>
         <div className="skill-computer skill-computer-right" >
-            <h2 className="skill-computer-title" > {"> Certificate"}  </h2>
+            <h2 className="skill-computer-title" > {"> Certificates"}  </h2>
             <div className="skill-list-div" >
                 {certificate_list.map((skill, index) => (
                     <span className="skill-list-span"  key={index}>
@@ -54,7 +54,7 @@ return (
                     </span>
                 ))}
             </div>
-            <h2 className="skill-computer-title skill-achievement" > {"> Achievement"}  </h2>
+            <h2 className="skill-computer-title skill-achievement" > {"> Achievements"}  </h2>
             <div className="skill-list-div" >
                 {acheivement_list.map((skill, index) => (
                     <span className="skill-list-span"  key={index}>
