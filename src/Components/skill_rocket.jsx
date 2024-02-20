@@ -36,7 +36,7 @@ const acheivement_list = [
 return (
     <>
         <div className="skill-computer skill-computer-left">
-            <h2 className="skill-computer-title"> {"> Skills"}  </h2>
+            <h2 className="skill-computer-title"> {"> Skillsss"}  </h2>
             <div className="skill-list-div">
                 {skills_list.map((skill, index) => (
                     <span className="skill-list-span"  key={index}>
