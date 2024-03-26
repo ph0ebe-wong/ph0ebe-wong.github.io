@@ -1,13 +1,15 @@
-import './Styling/projects.css';
-import ecoden from "./Assets/projects/ecoden home.jpg"
-import matchable from "./Assets/projects/matchable home.jpg"
-import papaya from "./Assets/projects/papaya food court home.jpg"
-import cognidex from "./Assets/projects/cognidex.png"
-import solarwind from "./Assets/projects/solarwind.jpeg"
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import OpenInNewOutlinedIcon from '@mui/icons-material/OpenInNewOutlined';
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import cognidex from "./Assets/projects/cognidex.png";
+import ecoden from "./Assets/projects/ecoden home.jpg";
+import matchable from "./Assets/projects/matchable home.jpg";
+import papaya from "./Assets/projects/papaya food court home.jpg";
+import solarwind from "./Assets/projects/solarwind.jpeg";
+import portflio from  "./Assets/projects/portfolio.png";
+import './Styling/projects.css';
+import {useMediaQuery} from '@react-hook/media-query'
+
 
 const projectData = [
   
@@ -30,6 +32,7 @@ const projectData = [
     backgroundImage: matchable,
     title: "MATCHABLE",
     description: ["An online dating website allows user to conveniently connect with potential partners regardless of distance, with emphasis on ensuring data and website security"], 
+    link: 'https://ph0ebe-wong.github.io/project-page/matchable', 
     skills: ["HTML", "CSS", "Javascript", "Flask", "MySQL", "Website Security", "Data Security"]
   },
   {
@@ -37,6 +40,7 @@ const projectData = [
     backgroundImage: solarwind,
     title: "SIMULATION",
     description: ["This project simulates the SolarWinds cyberattack by recreating its vulnerabilities in VMWare environments, implementing defence, monitoring, and backup systems to enhance security and ensure swift recovery"], 
+    link: 'https://ph0ebe-wong.github.io/project-page/solarwind-simulation', 
     skills: ["Kali Linux", "Immunet", "ModSecurity", "Splunk", "VMWare", "Restic"]
   },
   {
@@ -49,7 +53,7 @@ const projectData = [
   },
   {
     id: 'portfolio',
-    backgroundImage: "url('https://d21950x0o1sh55.cloudfront.net/uploads/inside_exclusif/picture/6/desktop_VALERIAN_BNP_02.jpg')",
+    backgroundImage: portflio,
     title: "PORTFOLIO WEBSITE",
     description: ["A website to showcase my portfolio and projects."], 
     skills: ["Reactjs", "GSAP"]
@@ -59,72 +63,55 @@ const projectData = [
 
 
 const Projects = () => {
-  const [visibleProject, setVisibleProject] = useState(null); 
-
-  const toggleProjectImg = (index) => {
-    if (visibleProject === index) {
-      setVisibleProject(null);
-    } else {
-      setVisibleProject(index);
-    }
-  };
-
   const navigate = useNavigate()
+  const isMobile = useMediaQuery('only screen and (max-width: 768px)');
+
 
 
   return (
-    <div className="projects-div">
-      <h1 >Project Launchpad</h1>
-      <div className="grid-container" >
-        {projectData.map((project, index) => (
-          <>
-            <div key={index} className="project-computer-case">
-              <div className="project-computer-rim">
-                <div className="project-computer-screen">
-                  <h2>{project.title}</h2>
-                  <p>{project.description}</p>
-                  <div className="project-computer-screen-skills" >
-                    {project.skills.map((skill, index) => (
-                      <span key={index}>{skill}</span> 
-                    ))}                
-                  </div>
-                  {project.link &&
-                    <button className="project-btn">
-                      Explore
-                    </button>
-                  }
-                  <div
-                    className="toggle-project-btn"
-                    // onClick={() => setVisibleProject(index)}
-                    onClick={()=>navigate(
-                      '/project',
-                      { state: { project: project }} 
-                    )}
-                  >
-                    <KeyboardArrowUpIcon />
-                    <p>Click to view project</p>
-                  </div>
-
-                  {visibleProject === index && (
-                    <>
-                      <div style={{background: 'black', width: 430, height: 305, position: 'absolute', top: 0, left: 0}}>
-                        <div>
-                          </div>
-                        <img src={project.backgroundImage} alt={project.title} className="project-image"  />
-                          {/* <div style={{zIndex: 3, display:'flex', gap: 5, alignItems: 'center', position:'absolute', top: 0, right: 10}}>
-                            <p style={{color: 'black'}}>Close</p>
-                            <ExpandMoreIcon style={{color: 'black'}} />
-                          </div> */}
-                      </div>
-                    </>
-                  )}
-                </div>
+    <>
+      <div className="div-container" style={{alignItems: 'start', height: '100%'}}>
+          <div class='intro-container' style={{alignItems: 'start', flexDirection: 'column'}}>
+              <div className="header-container">
+                  <h2 className='header-title'>My Projects</h2>
+                  <div className='header-divider'/>
               </div>
-            </div>
-          </>
-        ))}
+
+              <div className='project-card-container' style={{justifyContent: isMobile ? 'center': 'none'}}>
+
+                {
+                  projectData.map((project, index) => (
+                    <div key={index} className='project-card' id='project-card-div' style={{width: isMobile ? 300 : 350}}>
+                      <div>
+                        <img className='project-card-img' src={project.backgroundImage} />
+                        <h3 className='project-card-title'>{project.title}</h3>
+                        <p className='project-card-description'>{project.description}</p>
+                      </div>
+
+                      <div>
+                        <div className='project-card-skill-list' >
+                          {
+                            (project.skills).map((skill, index) => (
+                                <p key={index} >{skill}</p>
+                            ))
+                          }
+                        </div>
+                        {
+                          (project.link) && (
+                            <OpenInNewOutlinedIcon style={{color: 'white', marginTop: 10, cursor: 'pointer'}} onClick={() => {window.open(project.link, "_blank");}} />
+                          )
+                        }                        
+                      </div>
+                  </div>
+                  ))
+                }
+              </div>
+              <div className='extension-container' />
+          </div>
       </div>
-    </div>
+
+      <div className='extension-container' />
+    </>
   );
 }
 

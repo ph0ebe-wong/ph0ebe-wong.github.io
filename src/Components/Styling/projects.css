@@ -1,122 +1,47 @@
-.projects-div {
-  transform: translateY(700px);
-  width: 80%;
-  z-index: 2;
-}
-.projects-div h1{
-  font-family: 'Robot9000';
-}
-
-.grid-container{
+.project-card-container{
   display: flex;
-  justify-content: center;
+  gap: 20px;
   flex-wrap: wrap;
-  gap: 60px 50px;
-  margin-top: 30px;
 }
 
-.project-btn {
-  min-height: 33px;
-  min-width: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  position: relative;
-  cursor: pointer;
-  background: --webkit-gradient(linear, left top, right top, color-stop(-12.74%, rgba(110, 239, 255, .5)), color-stop(56.76%, rgba(106, 224, 255, .271)));
-  background: linear-gradient(90deg, rgba(110, 239, 255, .5) -12.74%, rgba(106, 224, 255, .271) 56.76%);
-  border: 2px solid #acf7ff;
-  color: #FFFFFF;
-  font-size: 15px;
-  font-weight: 600;
-}
 
-.project-btn:before {
-  content: "";
-  width: 4px;
-  height: 28px;
-  background: #19173b;
-  border: 2px solid #acf7ff;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  position: absolute;
-  border-top: 0;
-  border-left: 0;
-  border-bottom: 0;
-  bottom: -7px;
-  left: 4px;
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px;
-}
-
-.project-btn:after {
-  content: "";
-  position: absolute;
-  left: -2px;
-  bottom: -2px;
-  border-top: 15px solid transparent;
-  border-left: 15px solid #fffcf7;
-}
-
-.project-computer-case {
+.project-card {
   background: #468B98;
-  width: 475px;
-  height: 350px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.project-computer-rim {
-  background: #B3BDC9;
-  width: 450px;
-  height: 325px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.project-computer-screen {
-  background: #020834;
-  width: 430px;
-  height: 305px;
+  width: 310px;
+  border-radius: 20px;
+  padding: 15px;
   display: flex;
   justify-content: space-between;
-  align-items: start;
-  gap: 20px;
   flex-direction: column;
-  text-align: left;
+}
+
+#project-card-div:hover{
+  transform: translateY(-20px);
+}
+
+.project-card-img {
+  background: royalblue;
+  width: 100%;
+  height: 170px;
+  border-radius: 10px;
+}
+
+.project-card-title {
   color: white;
-  padding: 15px;
-  position: relative;
-  font-family: '8bitOperator';
+  margin-top: 20px;
 }
 
-.project-computer-screen-skills {
+.project-card-description {
+  color: white;
+  margin-top: 10px;
+}
+
+.project-card-skill-list {
   display: flex;
+  align-items: center;
+  gap: 7px;
+  color: white;
   flex-wrap: wrap;
-  gap: 10px;
-  align-items: center;
-}
-
-.toggle-project-btn {
-  display: flex;
-  justify-content: center;
-  width: 95%;
-  flex-direction: column;
-  align-items: center;
-}
-
-.project-image {
-  width: 430px;
-  height: 270px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  flex-direction: row;
+  margin-top: 20px;
 }

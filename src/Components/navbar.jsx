@@ -1,43 +1,111 @@
-import React, { useState, useEffect, useRef } from 'react';
-import './Styling/NavBar.css'
-import Logo from './Assets/phoebe_logo.PNG'
+import React, { useState, useRef, useEffect } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
+import Logo from './Assets/phoebeLogo.png';
+import './Styling/NavBar.css';
+import {useMediaQuery} from '@react-hook/media-query'
+import gsap from 'gsap';
 
 const Navbar = () => {
   const [activeItem, setActiveItem] = useState('home');
-  const indicatorRef = useRef(null);
+  const navRef = useRef(null);
+  const navigate = useNavigate()
 
-  const handleItemClick = (item, event) => {
-    setActiveItem(item);
-    updateIndicator(event.target);
-  };
 
-  const updateIndicator = (activeElement) => {
-    const width = activeElement.offsetWidth;
-    const left = activeElement.offsetLeft;
-    indicatorRef.current.style.width = `${width}px`;
-    indicatorRef.current.style.left = `${left}px`;
+  const handleScroll = () => {
+    const sections = ['home', 'experience', 'projects', 'achievements'];
+    const currentSection = sections.find(section => {
+      const element = document.getElementById(section);
+      if (element) {
+        const scrollPosition = window.scrollY + navRef.current.offsetHeight;
+        return scrollPosition >= element.offsetTop && scrollPosition <= element.offsetTop + element.offsetHeight;
+      }
+      return false;
+    });
+    if (currentSection) {
+      setActiveItem(currentSection);
+    }
   };
 
   useEffect(() => {
-    const activeElement = document.querySelector('.nav-item.current');
-    if (activeElement) {
-      updateIndicator(activeElement);
-    }
-  }, [activeItem]);
+    window.addEventListener('scroll', handleScroll);
 
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const location = useLocation();
+  const pathname = location.pathname;
+
+  useEffect(() => {  
+    if (pathname.startsWith('/project-page/')){
+      setActiveItem('projects');
+    }
+  }, [location]); 
+
+
+  const mobileNavContainerRef = useRef(null);
+  const mobileNavCloseRef = useRef(null);
+  const isMobile = useMediaQuery('only screen and (max-width: 768px)');
+
+  useEffect(() => {
+    if (isMobile) {
+      const tl = gsap.timeline({ defaults: { duration: 0.5, ease: 'expo.inOut' } });
+
+      mobileNavContainerRef.current.addEventListener('click', () => {
+        if (tl.reversed()) {
+          tl.play();
+        } else {
+          tl.to('.mobile-nav', { right: 0 })
+            .to('.mobile-nav', { height: '100vh' }, '-=.1')
+            .to('.mobile-nav ul li a', { opacity: 1, pointerEvents: 'all', stagger: 0.2 }, '-=.8')
+            .to('.mobile-nav-close', { opacity: 1, pointerEvents: 'all' }, '-=.8')
+        }
+      });
+
+      mobileNavCloseRef.current.addEventListener('click', () => {
+        tl.reverse();
+      });
+    }
+  }, []);  
 
   return (
-    <nav class="nav">
-      <div class="container">
-        <img className="navbar-logo" src={Logo }/> 
-        <ul>
-          <li><a href="#" className={`nav-item ${activeItem === 'home' ? 'current' : ''}`} onClick={(e) => handleItemClick('home', e)}>Home</a></li>
-          <li><a href="#" className={`nav-item ${activeItem === 'experience' ? 'current' : ''}`} onClick={(e) => handleItemClick('experience', e)}>Experience</a></li>
-          <li><a href="#" className={`nav-item ${activeItem === 'projects' ? 'current' : ''}`} onClick={(e) => handleItemClick('projects', e)}>Projects</a></li>
-        </ul>      
-        <span ref={indicatorRef} className="nav-indicator"></span>
-      </div>
-    </nav>  
+    <>
+      {
+        isMobile ? (
+          <>
+            <div className="mobile-nav-container" ref={mobileNavContainerRef}>
+              {/* <img className="navbar-logo" src={Logo} alt="Logo" onClick={() => navigate('/')} /> */}
+              <div className="mobile-nav-bars"></div>
+            </div>
+            <nav ref={navRef} className="mobile-nav">
+              
+              <div className="mobile-nav-close" ref={mobileNavCloseRef}>
+                <div></div>
+              </div>
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+              </ul>
+            </nav>          
+          </>
+        ):(
+          <nav class="nav" ref={navRef}>
+          <div class="container">
+            <img className="navbar-logo" src={Logo} onClick={() => {navigate('/')}} /> 
+            <ul>
+              <li><Link to="/#home" className={`nav-item ${activeItem === 'home' ? 'current' : ''}`} >Home</Link></li>
+              <li><Link to="/#experience" className={`nav-item ${activeItem === 'experience' ? 'current' : ''}`} >Experience</Link></li>
+              <li><Link to="/#projects"  className={`nav-item ${activeItem === 'projects' ? 'current' : ''}`} >Projects</Link></li>
+              <li><Link to="/#achievements" className={`nav-item ${activeItem === 'achievements' ? 'current' : ''}`} >Achievements</Link></li>
+            </ul>   
+          </div>
+        </nav>  
+          )
+      }
+    </>
   );
 };
 
