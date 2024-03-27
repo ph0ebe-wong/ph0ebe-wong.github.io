@@ -1,6 +1,6 @@
 import OpenInNewOutlinedIcon from '@mui/icons-material/OpenInNewOutlined';
 import { useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import cognidex from "./Assets/projects/cognidex.png";
 import ecoden from "./Assets/projects/ecoden home.jpg";
 import matchable from "./Assets/projects/matchable home.jpg";
@@ -32,7 +32,7 @@ const projectData = [
     backgroundImage: matchable,
     title: "MATCHABLE",
     description: ["An online dating website allows user to conveniently connect with potential partners regardless of distance, with emphasis on ensuring data and website security"], 
-    link: 'https://ph0ebe-wong.github.io/project-page/matchable', 
+    link: '/project-page/matchable', 
     skills: ["HTML", "CSS", "Javascript", "Flask", "MySQL", "Website Security", "Data Security"]
   },
   {
@@ -40,7 +40,7 @@ const projectData = [
     backgroundImage: solarwind,
     title: "SIMULATION",
     description: ["This project simulates the SolarWinds cyberattack by recreating its vulnerabilities in VMWare environments, implementing defence, monitoring, and backup systems to enhance security and ensure swift recovery"], 
-    link: 'https://ph0ebe-wong.github.io/project-page/solarwind-simulation', 
+    link: "/project-page/solarwind-simulation",
     skills: ["Kali Linux", "Immunet", "ModSecurity", "Splunk", "VMWare", "Restic"]
   },
   {
@@ -98,7 +98,8 @@ const Projects = () => {
                         </div>
                         {
                           (project.link) && (
-                            <OpenInNewOutlinedIcon style={{color: 'white', marginTop: 10, cursor: 'pointer'}} onClick={() => {window.open(project.link, "_blank");}} />
+                            <Link to={project.link}><OpenInNewOutlinedIcon style={{color: 'white', marginTop: 10, cursor: 'pointer'}}  /></Link>
+                            
                           )
                         }                        
                       </div>

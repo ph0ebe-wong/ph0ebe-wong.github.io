@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { useParams } from "react-router";
+import { useLocation } from "react-router-dom";
 import './Styling/Home.css';
 
 // matchable
@@ -25,6 +26,12 @@ const MatchablePage = () =>{
     const project = useParams()
 
     const isMobile = useMediaQuery('only screen and (max-width: 768px)');
+
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
 
 
     const matchable_details = [

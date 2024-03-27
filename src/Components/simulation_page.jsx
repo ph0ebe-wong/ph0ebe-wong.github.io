@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useEffect} from "react";
 import './Styling/Home.css';
+import { useLocation } from "react-router-dom";
 
 
 //solar wind 
@@ -14,6 +15,13 @@ import {useMediaQuery} from '@react-hook/media-query'
 
 const SimulationPage = () =>{
     const isMobile = useMediaQuery('only screen and (max-width: 768px)');
+
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
 
     const solarwind_details = [
         {name: 'Scenario', image: solarwind_scenario, description: "The image outlines the key stages of the SolarWinds cyberattack from 2019 to 2021, starting with initial network breaches and leading to the deployment of Sunburst malware. It details the attack's discovery, subsequent security advisories, and the shutdown of the malware's infrastructure. This timeline effectively encapsulates the critical moments of a complex cybersecurity event."},

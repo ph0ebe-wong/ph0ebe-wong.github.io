@@ -66,6 +66,18 @@ const Navbar = () => {
       mobileNavCloseRef.current.addEventListener('click', () => {
         tl.reverse();
       });
+
+      const navItems = document.querySelectorAll('.mobile-nav ul li a');
+      navItems.forEach(item => {
+        item.addEventListener('click', () => {
+          setTimeout(() => {
+            if (!tl.reversed()) {
+              tl.reverse();
+            }
+          }, 1000); // Close nav after 1 second
+        });
+      });
+
     }
   }, []);  
 
@@ -73,23 +85,26 @@ const Navbar = () => {
     <>
       {
         isMobile ? (
-          <>
-            <div className="mobile-nav-container" ref={mobileNavContainerRef}>
-              {/* <img className="navbar-logo" src={Logo} alt="Logo" onClick={() => navigate('/')} /> */}
-              <div className="mobile-nav-bars"></div>
-            </div>
-            <nav ref={navRef} className="mobile-nav">
-              
-              <div className="mobile-nav-close" ref={mobileNavCloseRef}>
-                <div></div>
+          <>  
+            <div className='mobile-nav-div' >
+              <div className="mobile-nav-container" ref={mobileNavContainerRef}>
+                  {/* <img className="navbar-logo" src={Logo} alt="Logo" onClick={() => navigate('/')} /> */}
+                  <div className="mobile-nav-bars"></div>              
               </div>
-              <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-              </ul>
-            </nav>          
+              
+            </div>
+            
+              <nav ref={navRef} className="mobile-nav">
+                <div className="mobile-nav-close" ref={mobileNavCloseRef}>
+                  <div></div>
+                </div>
+                <ul>
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#experience">Experience</a></li>
+                  <li><a href="#projects">Projects</a></li>
+                  <li><a href="#achievements">Achievements</a></li>
+                </ul>
+              </nav>          
           </>
         ):(
           <nav class="nav" ref={navRef}>
