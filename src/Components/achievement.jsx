@@ -14,8 +14,9 @@ const Achievement = () =>{
     ]
 
     const certificate_list =[
-        {'name': 'Computer Hacking Forensic Investigator'}, 
-        {'name': 'Google Data Analytics'}
+        {'name': 'Computer Hacking Forensic Investigator (CHFI)'}, 
+        {'name': 'Google Data Analytics'},
+        {'name': 'Certified Ethical Hacker (CEH)'}
     ]
     
     const acheivement_list = [

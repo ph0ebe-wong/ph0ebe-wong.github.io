@@ -29,7 +29,7 @@ const Intro = () =>{
                     </div>
 
                     <p class='intro-text' style={{fontSize: 15, textAlign:'center'}}>
-                        and I am a Cybersecurity and Digital Forensics enthusiast from Nanyang Polytechnic, 
+                        I am a Cybersecurity and Digital Forensics enthusiast from Nanyang Polytechnic, 
                         graduating in 2024. With a background in full-stack development and cloud computing, 
                         I aim to specialize in cyber forensics. I'm dedicated to making a meaningful impact in cybersecurity 
                         and keen on exploring cutting-edge solutions in cyber forensic investigations.
@@ -53,7 +53,7 @@ const Intro = () =>{
                             Hello, I am Phoebe Wong
                             </div>
                             <p class='intro-text'>
-                            and I am a Cybersecurity and Digital Forensics enthusiast from Nanyang Polytechnic, 
+                            I am a Cybersecurity and Digital Forensics enthusiast from Nanyang Polytechnic, 
                             graduating in 2024. With a background in full-stack development and cloud computing, 
                             I aim to specialize in cyber forensics. I'm dedicated to making a meaningful impact in cybersecurity 
                             and keen on exploring cutting-edge solutions in cyber forensic investigations.

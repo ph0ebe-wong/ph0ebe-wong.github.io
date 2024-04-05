@@ -54,7 +54,7 @@ const Experience = () =>{
 							<h3 className="vertical-timeline-element-title">Academy of Medicine Singapore</h3>
 							<h4 className="vertical-timeline-element-subtitle">Temporary Administrative Support Staff</h4>
 							<p>
-								In my role, I actively contributed to event success, assisting with various tasks and managing administrative duties. My responsibilities included making key calls and handling essential paperwork, ensuring efficient coordination and organization.				
+								I actively contributed to event success, assisting with various tasks and managing administrative duties. My responsibilities included making key calls and handling essential paperwork, ensuring efficient coordination and organization.				
 							</p>
 						</VerticalTimelineElement>
 							
@@ -84,7 +84,7 @@ const Experience = () =>{
 							<h3 className="vertical-timeline-element-title">NUS Business Analytics Centre</h3>
 							<h4 className="vertical-timeline-element-subtitle">Business Analytics Intern</h4>
 							<p>
-								I developed a Web3 Data Marketplace, using React.js and AWS to build a full-stack application with a focus on security. My efforts were centered on ensuring data integrity and user trust, emphasizing my dedication to creating dependable software solutions				
+								I developed a Web3 Data Marketplace, using React.js and AWS to build a full-stack application with a focus on security. My efforts were centered on ensuring data integrity and user trust, emphasizing my dedication to creating dependable software solutions.				
 							</p>
 						</VerticalTimelineElement>
 							

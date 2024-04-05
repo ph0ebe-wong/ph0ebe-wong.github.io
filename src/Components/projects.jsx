@@ -1,14 +1,13 @@
 import OpenInNewOutlinedIcon from '@mui/icons-material/OpenInNewOutlined';
-import { useState } from 'react';
-import { useNavigate, Link } from "react-router-dom";
+import { useMediaQuery } from '@react-hook/media-query';
+import { Link } from "react-router-dom";
 import cognidex from "./Assets/projects/cognidex.png";
 import ecoden from "./Assets/projects/ecoden home.jpg";
 import matchable from "./Assets/projects/matchable home.jpg";
 import papaya from "./Assets/projects/papaya food court home.jpg";
+import portflio from "./Assets/projects/portfolio.png";
 import solarwind from "./Assets/projects/solarwind.jpeg";
-import portflio from  "./Assets/projects/portfolio.png";
 import './Styling/projects.css';
-import {useMediaQuery} from '@react-hook/media-query'
 
 
 const projectData = [
@@ -16,21 +15,21 @@ const projectData = [
   {
     id: 'ecoden',
     backgroundImage: ecoden,
-    title: "ECO-DEN SUPERMARKET",
-    description: ["A e-commerce supermarket website allows user to browse, add and purchase grocery items with PayPal, and includes a membership point system through purchases or an in-app card game."], 
+    title: "Eco-Den Supermarket",
+    description: ["An e-commerce supermarket website allows user to browse, add and purchase grocery items with PayPal, and includes a membership point system through purchases or an in-app card game."], 
     skills: ["HTML", "CSS", "Javascript", "Flask", "Microsoft SQL"]
   },
   {
     id: 'papaya_food_court',
     backgroundImage: papaya,
-    title: "PAPAYA FOOD COURT",
+    title: "Papaya Food Court Website",
     description: ["An online food delivery service enables users to order and savor local cuisine, with an emphasis on ensuring website security."], 
     skills: ["HTML", "CSS", "Javascript", "Flask", "Python Shelve", "Website security"]
   },
   {
     id: 'matchable',
     backgroundImage: matchable,
-    title: "MATCHABLE",
+    title: "Matchable Dating Website",
     description: ["An online dating website allows user to conveniently connect with potential partners regardless of distance, with emphasis on ensuring data and website security"], 
     link: '/project-page/matchable', 
     skills: ["HTML", "CSS", "Javascript", "Flask", "MySQL", "Website Security", "Data Security"]
@@ -38,7 +37,7 @@ const projectData = [
   {
     id: 'solarwind_simulation',
     backgroundImage: solarwind,
-    title: "SIMULATION",
+    title: "Solarwind Attack Simulation",
     description: ["This project simulates the SolarWinds cyberattack by recreating its vulnerabilities in VMWare environments, implementing defence, monitoring, and backup systems to enhance security and ensure swift recovery"], 
     link: "/project-page/solarwind-simulation",
     skills: ["Kali Linux", "Immunet", "ModSecurity", "Splunk", "VMWare", "Restic"]
@@ -46,7 +45,7 @@ const projectData = [
   {
     id: 'cognidex',
     backgroundImage: cognidex,
-    title: "COGNIDEX",
+    title: "CognideX Website",
     description: ["A decentralized application (DApp) that allows users to create, buy, sell data."], 
     link: 'https://www.cognidex.net/', 
     skills: ["Figma", "Reactjs", "AWS", "Postgres", ]
@@ -54,7 +53,7 @@ const projectData = [
   {
     id: 'portfolio',
     backgroundImage: portflio,
-    title: "PORTFOLIO WEBSITE",
+    title: "Portfolio Website",
     description: ["A website to showcase my portfolio and projects."], 
     skills: ["Reactjs", "GSAP"]
   }
@@ -63,7 +62,6 @@ const projectData = [
 
 
 const Projects = () => {
-  const navigate = useNavigate()
   const isMobile = useMediaQuery('only screen and (max-width: 768px)');
 
 
@@ -83,7 +81,7 @@ const Projects = () => {
                   projectData.map((project, index) => (
                     <div key={index} className='project-card' id='project-card-div' style={{width: isMobile ? 300 : 350}}>
                       <div>
-                        <img className='project-card-img' src={project.backgroundImage} />
+                        <img className='project-card-img' src={project.backgroundImage} alt={project.title} />
                         <h3 className='project-card-title'>{project.title}</h3>
                         <p className='project-card-description'>{project.description}</p>
                       </div>
