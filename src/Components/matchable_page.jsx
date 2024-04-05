@@ -1,29 +1,28 @@
-import React, {useEffect} from "react";
-import { useParams } from "react-router";
+import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import './Styling/Home.css';
 
 // matchable
-import matchable_bg from './Assets/projects/matchable/matchable_cover.png'
-import matchable_home from './Assets/projects/matchable/matchable_home.png'
-import matchable_login from './Assets/projects/matchable/matchable_login.png'
-import matchable_signup from './Assets/projects/matchable/matchable_signup.png'
-import matchable_otp from './Assets/projects/matchable/matchable_otp.png'
-import matchable_ImageValidation from './Assets/projects/matchable/matchable_ImageValidation.png'
-import matchable_editProfiilePrompt from './Assets/projects/matchable/matchable_editProfiilePrompt.png'
-import matchable_updatePassword from './Assets/projects/matchable/matchable_updatePassword.png'
-import matchable_updatePasswordM2 from './Assets/projects/matchable/matchable_updatePasswordM2.png'
-import matchable_adminUsers from './Assets/projects/matchable/matchable_adminUsers.png'
-import matchable_restoreDeletedUsers from './Assets/projects/matchable/matchable_restoreDeletedUsers.png'
-import matchable_backup from './Assets/projects/matchable/matchable_backup.png'
+import matchable_ImageValidation from './Assets/projects/matchable/matchable_ImageValidation.png';
+import matchable_adminUsers from './Assets/projects/matchable/matchable_adminUsers.png';
+import matchable_backup from './Assets/projects/matchable/matchable_backup.png';
+import matchable_bg from './Assets/projects/matchable/matchable_cover.png';
+import matchable_editProfiilePrompt from './Assets/projects/matchable/matchable_editProfiilePrompt.png';
+import matchable_home from './Assets/projects/matchable/matchable_home.png';
+import matchable_login from './Assets/projects/matchable/matchable_login.png';
+import matchable_otp from './Assets/projects/matchable/matchable_otp.png';
+import matchable_restoreDeletedUsers from './Assets/projects/matchable/matchable_restoreDeletedUsers.png';
+import matchable_signup from './Assets/projects/matchable/matchable_signup.png';
+import matchable_updatePassword from './Assets/projects/matchable/matchable_updatePassword.png';
+import matchable_updatePasswordM2 from './Assets/projects/matchable/matchable_updatePasswordM2.png';
 
-import {useMediaQuery} from '@react-hook/media-query'
+import { useMediaQuery } from '@react-hook/media-query';
 
 
 
 const MatchablePage = () =>{
 
-    const project = useParams()
+    // const project = useParams()
 
     const isMobile = useMediaQuery('only screen and (max-width: 768px)');
 

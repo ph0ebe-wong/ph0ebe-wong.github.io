@@ -53,8 +53,8 @@ const SimulationPage = () =>{
                                         <img className='project-banner-container-img' src={solarwind_bg} />
                                         <div className='project-banner-container-black'  />
                                         <div className='project-banner-div'  style={{padding: 10, width: '100%'}}>
-                                            <h2 className='project-banner-header' style={{fontSize: 20}}>Matchable</h2>
-                                            <p className='project-banner-desc' style={{fontSize: 15}}>An online dating website allows user to conveniently connect with potential partners regardless of distance, with emphasis on ensuring data and website security</p>
+                                            <h2 className='project-banner-header' style={{fontSize: 20}}>Solarwind Attack Simulation</h2>
+                                            <p className='project-banner-desc' style={{fontSize: 15}}>This project simulates the SolarWinds cyberattack by recreating its vulnerabilities in VMWare environments, implementing defence, monitoring, and backup systems to enhance security and ensure swift recovery</p>
                                         </div>
                                     </div>
                                     {solarwind_details.map((detail, index) => (
@@ -132,8 +132,8 @@ const SimulationPage = () =>{
                                             <img className='project-banner-container-img' src={solarwind_bg} />
                                             <div className='project-banner-container-black'  />
                                             <div className='project-banner-div' >
-                                                <h2 className='project-banner-header' >Matchable</h2>
-                                                <p className='project-banner-desc'>An online dating website allows user to conveniently connect with potential partners regardless of distance, with emphasis on ensuring data and website security</p>
+                                                <h2 className='project-banner-header' >Solarwind Attack Simulation</h2>
+                                                <p className='project-banner-desc'>This project simulates the SolarWinds cyberattack by recreating its vulnerabilities in VMWare environments, implementing defence, monitoring, and backup systems to enhance security and ensure swift recovery</p>
                                             </div>
                                         </div>
                                         {solarwind_details.map((detail, index) => (

@@ -1,11 +1,10 @@
-import React, {useEffect} from "react";
+import React from "react";
 import './Styling/Home.css';
 import Achievement from "./achievement";
+import Contact from "./contact";
 import Experience from "./experience";
 import Intro from "./intro";
 import Projects from "./projects";
-import Skills from "./skills";
-import Contact from "./contact";
 
 
 const Home = () =>{

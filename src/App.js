@@ -1,15 +1,14 @@
+import { useEffect } from 'react';
 import {
   Route,
   BrowserRouter as Router,
   Routes,
-  useLocation, 
-  useNavigate
+  useLocation
 } from "react-router-dom";
 import './App.css';
 import Home from './Components/home';
-import Navbar from "./Components/navbar";
-import { useEffect } from 'react';
 import MatchablePage from "./Components/matchable_page";
+import Navbar from "./Components/navbar";
 import SimulationPage from "./Components/simulation_page";
 
 const ScrollToAnchor = () => {
